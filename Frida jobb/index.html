@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ersättning offentligt biträde</title>
+</head>
+<body aria-hidden="false" class="bg-light text-dark">
+  <div class="main-container">
+    <div class="container-top">
+    <div class="form-check form-switch ms-auto mt-3 me-3">
+        <label class="form-check-label ms-3" for="lightSwitch">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="currentColor"
+            class="bi bi-brightness-high"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+            />
+          </svg>
+        </label>
+        <input class="form-check-input" type="checkbox" id="lightSwitch" />
+      </div>
+    </div>
+    <div class="py-5 text-center">
+    <h2>Ersättning offentligt biträde</h2>
+    <p class="lead">Fyll i uppgifterna i nedan rutor, arbetade timmar och utlägg i form av pengar, se total ersättning längst ned.</p>
+</div>
+    <div class="container">
+        <div class="box">
+        <h4 class="mb-3">Arbete</h4>
+        <label for="tid" class="form-label">Timmar <span class="text-muted">(Timkostandspris: 1.476 kr)</span></label>
+        <input type="number" id="timmar1" name="timmar" class="form-control">
+        <label for="tid" class="form-label">Minuter</label>
+        <input type="number" id="minuter1" name="minuter" class="form-control">
+    </div>
+    <div class="box">
+        <h4 class="mb-3">Tidsspillan</h4>
+        <label for="tid" class="form-label">Timmar <span class="text-muted">(Timkostandspris: 1.350 kr)</span></label>
+        <input type="number" id="timmar2" name="timmar2" class="form-control">
+        <label for="tid" class="form-label">Minuter</label>
+        <input type="number" id="minuter2" name="minuter" class="form-control">
+    </div>
+    </div>
+    <div class="container">
+        <div class="box">
+    <h4 class="mb-3">Utlägg</h4>
+</div>
+<div class="box"></div>
+<div class="box"></div>
+</div>
+    <div class="container">
+        
+    <div class="box">
+        
+        <label for="utlägg" class="form-label">Milersättning</label>
+        <input type="number" id="pengar1" name="1pengar" class="form-control">
+        <label for="utlägg" class="form-label">Trängselskatt</label>
+        <input type="number" id="pengar2" name="2pengar" class="form-control">
+    </div>
+    <div class="box">
+        <label for="utlägg" class="form-label">Parkeringsavgift</label>
+        <input type="number" id="pengar3" name="3pengar" class="form-control">
+        <label for="utlägg" class="form-label">SL</label><br>
+        <input type="number" id="pengar4" name="4pengar" class="form-control">
+        <select id="sl" name="sl" class="form-select">
+            <option value="0" selected>Välj resa</option>
+            <option value="39">Enkelresa - 39 kr</option>
+            <option value="78">Tur och retur - 78 kr</option>
+          </select>
+    </div>
+    <div class="box">
+        <label for="utlägg" class="form-label">Taxi</label>
+        <input type="number" id="pengar5" name="5pengar" class="form-control">
+        <label for="utlägg" class="form-label">Övrigt</label>
+        <input type="number" id="pengar6" name="6pengar" class="form-control">
+    
+        <input type="submit" value="Skicka" onclick="updateResult()" class="form-control">
+    </div>
+
+</div>
+<div class="container">
+    <div class="box2">
+        <h2 class="mb-3">Ersättning</h2>
+        <div class="grid-container">
+            <div class="grid-item"><p>Summa <span class="text-muted">(totalt exl. moms:)</span></p></div>
+            <div class="grid-item"><b><p id="summaMoms"></p></b></div>
+            <div class="grid-item"><p>Moms:</p></div>
+            <div class="grid-item"><b><p id="moms"></p></b></div>
+            <div class="grid-item"><p>Summa totalt:</p></div>
+            <div class="grid-item"><b><p id="summaTotal"></p></b></div>
+          </div>
+</div>
+<div class="box2"></div>
+</div>
+    <!-- få fram den totala kostnaden & vill veta vad varje kostnadspost
+    -arbete, tidsspillan, utlägg, mervärderskatt, timkostandspris: 1476 kr  -->
+    
+    
+    <div class="container-fluid">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-4 mb-md-0">Martin Olsson © 2023 | martinolsson89@gmail.com</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>
